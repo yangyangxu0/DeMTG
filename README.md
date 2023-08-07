@@ -21,7 +21,7 @@ DeMTG achieves strong performance on PASCAL-Context (`75.33 mIoU semantic segmen
 ![DeMTG](figures/overview_5.png)
 
 ## Performance
-![DeMTG](figures/Params_vs_acc.png =100x200)
+![DeMTG](figures/Params_vs_acc.png)
 
 ## Main Results on ImageNet with Pretrained Models
 
