@@ -18,7 +18,7 @@ We introduce deformable mixer Transformer with gating (DeMTG), a simple and effe
 DeMTG achieves strong performance on PASCAL-Context (`75.33 mIoU semantic segmentation` and `63.11 mIoU Human Segmentation` on test) and
  and NYUD-v2 semantic segmentation (`54.34 mIoU` on test), surpassing previous models by a large margin.
 
-![DeMTG](figures/overflow.png)
+![DeMTG](figures/overview_5.png)
 
 ## Main Results on ImageNet with Pretrained Models
 
