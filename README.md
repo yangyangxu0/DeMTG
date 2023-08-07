@@ -35,10 +35,10 @@ DeMTG achieves strong performance on PASCAL-Context (`75.33 mIoU semantic segmen
 
 | model | backbone |  SemSeg | PartSeg | Sal | Normal| Boundary| 
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| DeMTG | Swin-T | 69.44	 |58.02	 |83.31	 |14.31  |71.2 |
-| DeMTG | Swin-S | 71.54  |61.49	 |83.70  |14.90  |72.2 |
-| DeMTG | Swin-B | 75.37  |64.82	 |83.75	 |14.22	 |73.0 |
-| DeMTG | Swin-L | 78.54	 |67.42	 |83.74	 |14.17	 |74.9 |
+| DeMTG | Swin-T | 69.44	 |58.02	 |83.31	 |14.31  |71.2 | [Google Drive]() | [log]()  |
+| DeMTG | Swin-S | 71.54  |61.49	 |83.70  |14.90  |72.2 | [Google Drive]() | [log]()  |
+| DeMTG | Swin-B | 75.37  |64.82	 |83.75	 |14.22	 |73.0 | [Google Drive]() | [log]()  |
+| DeMTG | Swin-L | 78.54	 |67.42	 |83.74	 |14.17	 |74.9 | [Google Drive]() | [log]()  |
 
 
 ## Citing DeMTG multi-task method
