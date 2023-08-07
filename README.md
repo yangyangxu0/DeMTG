@@ -20,8 +20,8 @@ DeMTG achieves strong performance on PASCAL-Context (`75.33 mIoU semantic segmen
 
 ![DeMTG](figures/overview_5.png)
 
-## Performance
-![DeMTG](figures/Params_vs_acc.png =100x100)
+## Performancehttps://github.com/yangyangxu0/DeMTG/blob/main/README.md
+![DeMTG](figures/Params_vs_acc.png#w80)
 
 ## Main Results on ImageNet with Pretrained Models
 
@@ -30,7 +30,7 @@ DeMTG achieves strong performance on PASCAL-Context (`75.33 mIoU semantic segmen
 | model|backbone|#params| FLOPs | SemSeg| Depth | Noemal|Boundary| model checkpopint | log |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |:---: |:---: |
 | DeMTG | Swin-T | 33.2M  |125.49G |47.20	 |0.5660  |20.15  |77.2| [Google Drive]() | [log]()  |
-| DeMTG | Swin-S | 54.52M |145.84G |52.23	 |0.5599  |20.05	 |78.4 | [Google Drive]() | [log]()|
+| DeMTG | Swin-S | 54.52M |145.84G |52.23	 |0.5599  |20.05	 |78.4 | [Google Drive]() | [log]() |
 | DeMTG | Swin-B | 94.4M  |-G      |54.45  |0.5228  |19.33  |78.6 | [Google Drive]() | [log]() |
 | DeMTG | Swin-L | 202.92 |321.22G |57.55	 |0.5037	 |19.21	 |79.0 | [Google Drive]() | [log]() |
 
