@@ -20,6 +20,9 @@ DeMTG achieves strong performance on PASCAL-Context (`75.33 mIoU semantic segmen
 
 ![DeMTG](figures/overview_5.png)
 
+## Performance
+![DeMTG](figures/Params_vs_acc.png)
+
 ## Main Results on ImageNet with Pretrained Models
 
 **DeMTG on NYUD-v2 dataset**
@@ -41,7 +44,7 @@ DeMTG achieves strong performance on PASCAL-Context (`75.33 mIoU semantic segmen
 | DeMTG | Swin-L | 78.54	 |67.42	 |83.74	 |14.17	 |74.9 | [Google Drive]() | [log]()  |
 
 
-## Citing DeMTG multi-task method
+## Citation
 
 ```
 @inproceedings{xyy2023DeMT,
