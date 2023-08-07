@@ -6,23 +6,8 @@ This repo is the official implementation of ["DeMTG"](https://arxiv.org/abs/2301
 
 ## Updates
 
-***02/10/2023***
-1. We will release the code of DeMTG at the end of February.
-
-2. Merged Code.
-
-3. Released a series of models. Please look into the [data scaling](https://arxiv.org/abs/2301.03461) paper for more details.
-
-***02/07/2023***
-
-`News`: 
-
-1. The Thirty-Seventh Conference on Artificial Intelligence (AAAI2023) will be held in Washington, DC, USA., from February 7-14, 2023.
-
-
-***02/01/2023***
-
-1. DeMTG got accepted by AAAI 2023. 
+***07/07/2023***
+We release the models and code of DeMTG.
 
 
 ## Introduction
