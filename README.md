@@ -30,8 +30,8 @@ DeMTG achieves strong performance on PASCAL-Context (`75.33 mIoU semantic segmen
 | model|backbone|#params| FLOPs | SemSeg| Depth | Noemal|Boundary| model checkpopint | log |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |:---: |:---: |
 | DeMTG | Swin-T | 33.2M  |125.49G |47.20	 |0.5660  |20.15  |77.2| [Google Drive]() | [log]()  |
-| DeMTG | Swin-S | 54.52M |145.84G |52.23	 |0.5599  |20.05	 |78.4 | [Google Drive]() | [log]() |
-| DeMTG | Swin-B | 94.4M  |-G      |54.45  |0.5228  |19.33  |78.6 | [Google Drive]() | [log]() |
+| DeMTG | Swin-S | 54.52M |145.84G |52.23	 |0.5599  |20.05	 |78.4 | [Google Drive](https://drive.google.com/file/d/1GNZONi4Y2qm852j5S4t4YdIviu5uRFhg/view?usp=drive_link) | [log](https://drive.google.com/file/d/1Ty8uKsbIc7t67kFvQd9K_uP32Oojdfjk/view?usp=drive_link) |
+| DeMTG | Swin-B | 94.4M  |-G      |54.45  |0.5228  |19.33  |78.6 | [Google Drive](https://drive.google.com/file/d/1HKfg4sVnP_FArGN8YGzsumN92vHhS72o/view?usp=drive_link) | [log](https://drive.google.com/file/d/1vM8XAPR1-u_LADWsiXSETtcVetAqnwFC/view?usp=drive_link) |
 | DeMTG | Swin-L | 202.92 |321.22G |57.55	 |0.5037	 |19.21	 |79.0 | [Google Drive]() | [log]() |
 
 **DeMTG on PASCAL-Contex dataset**
@@ -39,9 +39,9 @@ DeMTG achieves strong performance on PASCAL-Context (`75.33 mIoU semantic segmen
 | model | backbone |  SemSeg | PartSeg | Sal | Normal| Boundary|model checkpopint | log |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |:---: | :---: |
 | DeMTG | Swin-T | 69.44	 |58.02	 |83.31	 |14.31  |71.2 | [Google Drive](https://drive.google.com/file/d/1Xk-5cmpQrikJyv-fVlfF2YT541rRjyOU/view?usp=drive_link) | [log](https://drive.google.com/file/d/1-SKKwdIV0yoFhxWrSQqFqwKlgywrVx6H/view?usp=drive_link)  |
-| DeMTG | Swin-S | 71.54  |61.49	 |83.70  |14.90  |72.2 | [Google Drive]() | [log]()  |
-| DeMTG | Swin-B | 75.37  |64.82	 |83.75	 |14.22	 |73.0 | [Google Drive]() | [log]()  |
-| DeMTG | Swin-L | 78.54	 |67.42	 |83.74	 |14.17	 |74.9 | [Google Drive]() | [log]()  |
+| DeMTG | Swin-S | 71.54  |61.49	 |83.70  |14.90  |72.2 | [Google Drive](https://drive.google.com/file/d/14k-mv6apb3iqjb9g6MeYh3a7SIUZWwg7/view?usp=drive_link) | [log](https://drive.google.com/file/d/1O1Dr9_mQYxrsswiHLGzJdj6UP3nbdnm1/view?usp=drive_link)  |
+| DeMTG | Swin-B | 75.37  |64.82	 |83.75	 |14.22	 |73.0 | [Google Drive](https://drive.google.com/file/d/1pIs_uAig_eRqhBvjaDagfMBFB7OlSwzw/view?usp=drive_link) | [log](https://drive.google.com/file/d/1WV7VUg0JSTHJxXKJjfUM2QcfCCRWb8rS/view?usp=drive_link)  |
+| DeMTG | Swin-L | 78.54	 |67.42	 |83.74	 |14.17	 |74.9 | [Google Drive](https://drive.google.com/file/d/11N8WCL6-nbaE2PRc2EaTDw0oo8a6A6xE/view?usp=drive_link) | [log](https://drive.google.com/file/d/1z9LdP__QLKcEQjg7JIZ0dswWoY0lnG0U/view?usp=drive_link)  |
 
 
 ## Citation
