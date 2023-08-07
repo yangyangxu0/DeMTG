@@ -26,21 +26,19 @@ DeMTG achieves strong performance on PASCAL-Context (`75.33 mIoU semantic segmen
 
 | model|backbone|#params| FLOPs | SemSeg| Depth | Noemal|Boundary| model checkpopint | log |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |:---: |:---: |
-| DeMTG | Swin-T | 32.07M | 100.70G | 46.36 | 0.5871 | 20.60| 76.9 | [Google Drive](https://drive.google.com/file/d/1IfQRVyvaVkEfybzh4QAz9Vq_0U38Hngq/view?usp=share_link) | [log](https://drive.google.com/file/d/1eAtQVJLcvIOMwAfKyl2NmYfe3hPne_WK/view?usp=share_link)  |
-| DeMTG(xd=2) | Swin-T | 36.6M| - | 47.45 | 0.5563| 19.90| 77.0 | [Google Drive](https://drive.google.com/file/d/1Rz4R9vu8bGtskpJDlVfgexYZoHtz8j8k/view?usp=share_link) | [log](https://drive.google.com/file/d/1TPo4pMjbhPAn3gxKOt4P7hVSPJe1Lpsn/view?usp=share_link)  |
-| DeMTG | Swin-S | 53.03M | 121.05G | 51.50 | 0.5474 | 20.02 | 78.1 | [Google Drive](https://drive.google.com/drive/folders/1jINF9WOyILqrPcsprWbM5VSCEWozsc1c) | [log](https://drive.google.com/drive/folders/1jINF9WOyILqrPcsprWbM5VSCEWozsc1c)|
-| DeMTG | Swin-B | 90.9M | 153.65G | 54.34 | 0.5209 | 19.21 | 78.5 | [Google Drive]() | [log]() |
-| DeMTG | Swin-L | 201.64M | -G | 56.94 | 0.5007 | 19.14 | 78.8 | [Google Drive]() | [log]() |
+| DeMTG | Swin-T | 33.2M  |125.49G |47.20	 |0.5660  |20.15  |77.2| [Google Drive]() | [log]()  |
+| DeMTG | Swin-S | 54.52M |145.84G |52.23	 |0.5599  |20.05	 |78.4 | [Google Drive]() | [log]()|
+| DeMTG | Swin-B | 94.4M  |-G      |54.45  |0.5228  |19.33  |78.6 | [Google Drive]() | [log]() |
+| DeMTG | Swin-L | 202.92 |321.22G |57.55	 |0.5037	 |19.21	 |79.0 | [Google Drive]() | [log]() |
 
 **DeMTG on PASCAL-Contex dataset**
 
 | model | backbone |  SemSeg | PartSeg | Sal | Normal| Boundary| 
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| DeMTG |HRNet-18| 59.23 | 57.93 | 83.93| 14.02 | 69.80 |
-| DeMTG | Swin-T | 69.71 | 57.18 | 82.63| 14.56 | 71.20 |
-| DeMTG | Swin-S | 72.01 | 58.96 | 83.20| 14.57 | 72.10 | 
-| DeMTG | Swin-B | 75.33 | 63.11 | 83.42| 14.54 | 73.20 |
-
+| DeMTG | Swin-T | 69.44	 |58.02	 |83.31	 |14.31  |71.2 |
+| DeMTG | Swin-S | 71.54  |61.49	 |83.70  |14.90  |72.2 |
+| DeMTG | Swin-B | 75.37  |64.82	 |83.75	 |14.22	 |73.0 |
+| DeMTG | Swin-L | 78.54	 |67.42	 |83.74	 |14.17	 |74.9 |
 
 
 ## Citing DeMTG multi-task method
