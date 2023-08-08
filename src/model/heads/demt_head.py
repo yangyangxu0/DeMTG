@@ -14,6 +14,7 @@ from torch.nn import init
 from torch.nn.modules.utils import _pair
 import math
 from einops.layers.torch import Rearrange
+from collections import OrderedDict
 
 
 class DemtHead(BaseHead):
@@ -36,15 +37,16 @@ class DemtHead(BaseHead):
                                            for t in self.tasks})
         self.init_weights()
 
-        self.defor_mixers = nn.ModuleList([DefMixer(dim_in=dim_, dim=dim_, depth=1)  for t in range (len(self.tasks))])
+        self.defor_mixers = nn.ModuleList([DefMixer(dim_in=dim_, dim=dim_, depth=2)  for t in range (len(self.tasks))])
 
         self.linear1 = nn.Sequential(nn.Linear(self.in_channels, dim_), nn.LayerNorm(dim_))
 
-        self.task_fusion = nn.MultiheadAttention(embed_dim=dim_, num_heads=4, dropout=0.)
+        self.task_fusion = nn.MultiheadAttention(embed_dim=dim_, num_heads=2, dropout=0.)
         self.smlp = nn.Sequential(nn.Linear(dim_, dim_), nn.LayerNorm(dim_))
         self.smlp2 = nn.ModuleList([nn.Sequential(nn.Linear(dim_, dim_), nn.LayerNorm(dim_))  for t in range (len(self.tasks))])
 
-        self.task_querys = nn.ModuleList([nn.MultiheadAttention(embed_dim=dim_, num_heads=4, dropout=0.)  for t in range (len(self.tasks))])
+        self.task_querys = nn.ModuleList([nn.MultiheadAttention(embed_dim=dim_, num_heads=2, dropout=0.)  for t in range (len(self.tasks))])
+        self.gmlps = sGATE(num_tokens=10000, len_sen=49, dim=dim_, d_ff=512, num_layers=1)
 
 
     def forward(self, inp, inp_shape, **kwargs):
@@ -66,6 +68,7 @@ class DemtHead(BaseHead):
         outs_ls = []
         for ind, task_query in enumerate(self.task_querys):
             inp = outs[ind] + self.smlp2[ind](task_query(outs[ind] ,task_cat, task_cat)[0])
+            inp = self.gmlps(inp)
             outs_ls.append(rearrange(inp, "b (h w) c -> b c h w", h=h, w=w).contiguous())
 
         inp_dict = {t: outs_ls[idx] for idx, t in enumerate(self.tasks)}
@@ -74,6 +77,45 @@ class DemtHead(BaseHead):
         final_pred = {t: nn.functional.interpolate(
                         final_pred[t], size=inp_shape, mode='bilinear', align_corners=False) for t in self.tasks}
         return {'final': final_pred}
+
+
+
+class SGatingLayer(nn.Module):
+    def __init__(self, dim, len_sen):
+        super().__init__()
+        len_sen_in = 256
+        self.ln = nn.LayerNorm(dim//2)
+        self.proj = nn.Conv1d(len_sen_in, len_sen_in, 1)
+        nn.init.zeros_(self.proj.weight)
+        nn.init.ones_(self.proj.bias)
+
+    def forward(self, x):
+        res, gate = torch.chunk(x, 2, -1)
+        ###Norm
+        gate = self.ln(gate)
+        gate_2 = gate.transpose(1, 2)
+        gate = self.proj(gate_2).transpose(1, 2)
+        return res * gate
+
+class sGATE(nn.Module):
+    def __init__(self, num_tokens=None, len_sen=49, dim=256, d_ff=1024, num_layers=None):
+        super().__init__()
+        self.num_layers = num_layers
+        self.dim = dim
+        self.gating = nn.ModuleList([Residual(nn.Sequential(OrderedDict([
+            ('ln1_%d' % i, nn.LayerNorm(self.dim)),
+            ('fc1_%d' % i, nn.Linear(self.dim, d_ff)),
+            ('gelu_%d' % i, nn.GELU()),
+            ('sgu_%d' % i, SGatingLayer(d_ff, len_sen)),
+            ('fc2_%d' % i, nn.Linear(d_ff//2, self.dim)),
+        ]))) for i in range(num_layers)])
+
+    def forward(self, x):
+
+        y = nn.Sequential(*self.gating)(x)
+
+        return y
+
 
 
 class Residual(nn.Module):
@@ -239,8 +281,6 @@ class Offset(nn.Module):
         offset = self.p_conv(x)
         dtype = offset.data.type()
         N = offset.size(1) // 2
-        p = self._get_p(offset, dtype)  #1,18,107,140
+        p = self._get_p(offset, dtype)
         p =self.opt(p)
         return p
-
-
