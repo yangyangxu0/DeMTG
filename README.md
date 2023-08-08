@@ -66,9 +66,7 @@ DeMTG achieves strong performance on PASCAL-Context (`75.33 mIoU semantic segmen
 ## Getting Started
 **Install and Data Prepare**
 
-```
 Please reference to [DeMT](https://github.com/yangyangxu0/DeMT)
-```
 
 
 
