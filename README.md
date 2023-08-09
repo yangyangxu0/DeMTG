@@ -15,8 +15,8 @@ We release the models and code of DeMTG.
 **DeMTG** (the name `DeMTG` stands for **De**formable **M**ixer **T**ransformer with **G**ating for Multi-Task Learning of Dense
 Prediction) is initially described in [arxiv](https://arxiv.org/pdf/2301.03461.pdf), which is an extension to our previous AAAI 2023.
 We introduce deformable mixer Transformer with gating (DeMTG), a simple and effective encoder-decoder architecture up-to-date that incorporates the convolution and attention mechanism in a unified network for MTL.
-DeMTG achieves strong performance on PASCAL-Context (`75.33 mIoU semantic segmentation` and `63.11 mIoU Human Segmentation` on test) and
- and NYUD-v2 semantic segmentation (`54.34 mIoU` on test), surpassing previous models by a large margin.
+DeMTG achieves strong performance on PASCAL-Context (`78.54 mIoU semantic segmentation` and `67.42 mIoU Human Segmentation` on test) and
+ and NYUD-v2 semantic segmentation (`57.55 mIoU` on test), surpassing previous models by a large margin.
 
 ![DeMTG](figures/overview_5.png)
 
