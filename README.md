@@ -1,6 +1,6 @@
 # Deformable Mixer Transformer with Gating for Multi-Task Learning of Dense Prediction
 
-This repo is the official implementation of ["DeMTG"](https://arxiv.org/abs/2301.03461) as well as the follow-ups. It currently includes code and models for the following tasks:
+This repo is the official implementation of ["DeMTG"](https://doi.org/10.48550/arXiv.2308.05721) as well as the follow-ups. It currently includes code and models for the following tasks:
 
 
 
@@ -13,7 +13,7 @@ We release the models and code of DeMTG.
 ## Introduction
 
 **DeMTG** (the name `DeMTG` stands for **De**formable **M**ixer **T**ransformer with **G**ating for Multi-Task Learning of Dense
-Prediction) is initially described in [arxiv](https://arxiv.org/pdf/2301.03461.pdf), which is an extension to our previous AAAI 2023.
+Prediction) is initially described in [arxiv](https://arxiv.org/pdf/2308.05721.pdf), which is an extension to our previous AAAI 2023.
 We introduce deformable mixer Transformer with gating (DeMTG), a simple and effective encoder-decoder architecture up-to-date that incorporates the convolution and attention mechanism in a unified network for MTL.
 DeMTG achieves strong performance on PASCAL-Context (`78.54 mIoU semantic segmentation` and `67.42 mIoU Human Segmentation` on test) and
  and NYUD-v2 semantic segmentation (`57.55 mIoU` on test), surpassing previous models by a large margin.
@@ -56,7 +56,7 @@ DeMTG achieves strong performance on PASCAL-Context (`78.54 mIoU semantic segmen
 
 @inproceedings{xyy2023DeMTG,
   title={Deformable Mixer Transformer with Gating for Multi-Task Learning of Dense Prediction},
-  author={Xu, Yangyang and Yang, Yibo and Zhang, Lefei },
+  author={Xu, Yangyang and Yang, Yibo and Ghanem, Bernard and Zhang, Lefei and Bo, Du and Tao, Dacheng},
   booktitle={arxiv},
   year={2023}
 }
